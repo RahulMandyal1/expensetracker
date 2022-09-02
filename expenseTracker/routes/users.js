@@ -74,18 +74,18 @@ router.get("/verify", async (req, res) => {
         service: "gmail",
         host: "smtp.gmail.com",
         auth: {
-          user: "rahulmandyal079@gmail.com",
-          pass: "Vishal@$079",
+          user: "rahulmandyal079@gmail.com", // your email id 
+          pass: "Vishal@$079", // your email  password here
         },
       })
     );
 
     var mailOptions = {
-      from: "rahulmandyal079@gmail.com",
-      to: "flixpahadi@gmail.com",
-      subject: "Sending Email using Node.js[nodemailer]",
-      html: `<h1> Hey copy  the code and verify to use our services<h1>
-    <p>${userCode}</p>`,
+      from: "rahulmandyal079@gmail.com", // your email id here
+      to: "flixpahadi@gmail.com",  //  user email id to whom you want to send mail
+      subject: "Sending Email using Node.js[nodemailer]", // subject of  the email
+      html: `<h1> Hey copy  the code and verify to use our services</h1>  // if you want to send some message by using some html tag
+    <p>${userCode}</p>`, // user code here
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
